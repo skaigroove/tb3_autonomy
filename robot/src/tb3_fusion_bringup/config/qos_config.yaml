@@ -1,0 +1,13 @@
+rtabmap:
+  ros__parameters:
+    qos_overrides:
+      /rgbd_image:
+        reliability: best_effort
+        durability: volatile
+        history: keep_last
+        depth: 5
+      /scan:
+        reliability: best_effort
+        durability: volatile
+        history: keep_last
+        depth: 5

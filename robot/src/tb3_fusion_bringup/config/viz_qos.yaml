@@ -1,0 +1,11 @@
+rtabmap_viz:
+  ros__parameters:
+    qos_overrides:
+      /camera/color/image_raw:
+        reliability: best_effort
+      /camera/depth/image_raw:
+        reliability: best_effort
+      /rgb/camera_info:
+        reliability: best_effort
+      /odom:
+        reliability: reliable
