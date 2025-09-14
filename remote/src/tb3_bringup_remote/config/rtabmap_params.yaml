@@ -1,0 +1,22 @@
+rtabmap:
+  ros__parameters:
+    subscribe_rgbd: true
+    subscribe_scan: true
+    approx_sync: true
+    approx_sync_max_interval: 0.3
+    topic_queue_size: 10
+    sync_queue_size: 20
+
+    frame_id: "base_link"
+    map_frame_id: "map"
+    odom_frame_id: "odom"
+    publish_tf: true
+    publish_map: true
+    publish_graph: true
+
+    # ← 여기! rtabmap의 구독 QoS를 강제로 BestEffort(2)
+    qos_image: 2           # rgbd_image 구독에 사용됨
+    qos_camera_info: 2     # 필요시
+    qos_scan: 2
+    qos_odom: 2
+    qos_user_data: 2
